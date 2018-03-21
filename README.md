@@ -2,7 +2,10 @@
 The home of skilled Tech Wizards
 
 cd into the file's directory.
-install all dependancies.
+(1)Install all dependancies.
+
 ` npm install`  
-to initiate server
+
+(2) initiate server
+
 ` node app ` 
