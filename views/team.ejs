@@ -4,30 +4,42 @@
 		<title>The Team</title>
 		<style>
 			body{
-				background-color: darkorchid;
+				background-color: tomato;
 				font-family: sans-serif;
 				padding: 40px;
 			}
 			*{
 				text-align: center;
-				color:#fff;
 				list-style: none;
 			}
 			h1{
 				text-transform: uppercase;
 				font-size: 4em;
+				color:#fff;
+			}
+			h3{
+				font-size:0.8em;
+				color:#fff;
 			}
 			p{
-				text-align: left;
-				display: inline-block;
+				text-align:left;
 			}
 			div{
+				text-align:center;
+				color:tomato;
+				text-transform:uppercase;
 				padding: 10px;
 				margin: 2em auto;
-				border: solid 5px;
-				height: 150px;
-				width: 350px;
-				
+				height: 120px;
+				width: 50%;
+				background-color:#fff;
+				transition:all .3s ease-out
+			}
+			div:hover{
+				transform:scale(1.1);
+			}
+			span{
+				color:skyblue;
 			}
 				button{
 				border: none;
@@ -39,6 +51,7 @@
 				letter-spacing: 1px;
 				background-color: skyblue;
 				transition: all .4s ease-out;
+				color:#fff;
 			}
 			button:hover{
 				color:skyblue;
@@ -50,15 +63,15 @@
 	</head>
 	<body>
 		<h1>The team</h1>
-			<div>
-				<p>Name:</p>
-				<p>Edwin walela</p><br/>
-				<p>Age:</p>
-				<p>18</p><br/>
-				<p>Job:</p>
-				<p>Full-Stack</p><br/>
-			</div>
-			<a href="/"><button>Home</button></a>
+		<h3>Showing <%= data.length %> member(s)</h3>
+		<% for(var i = 0; i < data.length; i++){ %>
+		<div>
+			<p><span><strong>Name: </strong></span><%= data[i].name%></p>
+			<p><span><strong>Age: </strong></span><%= data[i].age%></p>
+			<p><span><strong>Skill-Set: </strong></span><%= data[i].job%></p>
+		</div>
+		<% } %>
+		<a href="/"><button>Home</button></a>
 	</body>
 </html>
 

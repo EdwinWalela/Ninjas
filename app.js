@@ -1,10 +1,15 @@
-// Set-up server
-var http = require('http');
-var route = require('./routes');
+var express = require('express');
+var app = express();
 
-var server = http.createServer((req,res) => {
-	route.route(res,req);
+var data = require('./data');
+
+app.set('view engine', 'ejs')
+
+app.get('/',function(req,res){
+	res.render('index',{data: data.data});
 });
+app.get('/team',function(req,res){
+	res.render('team',{data: data.data});
+}); 
 
-server.listen(8080,'127.0.0.1');
-console.log('now listening to port:8080');
+app.listen(8080);
