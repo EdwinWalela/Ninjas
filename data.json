@@ -1,0 +1,28 @@
+"{
+   "data":[
+      {
+         "name":"edwin",
+         "age":18,
+         "job":"FullStack Dev",
+         "employed":false
+      },
+      {
+         "name":"max",
+         "age":23,
+         "job":"Front-End Dev",
+         "employed":true
+      },
+      {
+         "name":"edwin",
+         "age":31,
+         "job":"Back-End Dev",
+         "employed":true
+      },
+      {
+         "name":"joy",
+         "age":23,
+         "job":"Front-End Dev",
+         "employed":true
+      }
+   ]
+}"
